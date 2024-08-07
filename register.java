@@ -135,7 +135,7 @@ public class register extends JFrame {
 				else if(isCorrectpassword){
 					try {
 						Class.forName("com.mysql.cj.jdbc.Driver");
-						Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookshop", "root", "Aniket123@");
+						Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookshop", "root", "");
 						String query = "insert into user_details VALUES (?, ?, ?, ?, ?)";
 						PreparedStatement ps= con.prepareStatement(query);
 						ps.setString(1, txtname.getText());
